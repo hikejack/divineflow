@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Divine Flow Collective | Private Yoga, Event Planning &amp; Wellness — Lake George, NY</title>
+<meta name="description" content="Divine Flow Collective by Danielle Donnelly: private group yoga, event planning and day-of coordination, wellness services, and oracle readings — brought to you across the Lake George area. By appointment. Call or text (518) 480-7102.">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root {
+    --indigo:#241d52; --indigo-deep:#1a143f; --gold:#c6a15b; --gold-soft:#e9dcc0;
+    --cream:#faf7f0; --ink:#2c2742; --muted:#6f6a85;
+  }
+  body { font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color:var(--ink); line-height:1.6; background:var(--cream); }
+  h1, h2, h3, .serif { font-family: Georgia, "Palatino Linotype", "Book Antiqua", serif; font-weight:normal; }
+  .topbar { background:var(--indigo-deep); color:var(--gold-soft); text-align:center; padding:10px 12px; font-size:14.5px; letter-spacing:.02em; }
+  .topbar a { color:#fff; font-weight:bold; text-decoration:none; }
+  header.hero {
+    background: linear-gradient(rgba(26,20,63,.52), rgba(26,20,63,.38) 55%, rgba(26,20,63,.62)), url("assets/hero-dock-yoga.jpg") center 38%/cover no-repeat;
+    color:#fff; text-align:center; padding:64px 18px 58px;
+  }
+  header.hero img.logo { width:118px; height:118px; border-radius:50%; box-shadow:0 6px 24px rgba(0,0,0,.35); margin-bottom:18px; }
+  header.hero h1 { font-size:42px; line-height:1.15; letter-spacing:.04em; margin-bottom:6px; text-shadow:0 2px 14px rgba(0,0,0,.45); }
+  header.hero .rule { width:64px; height:2px; background:var(--gold); margin:14px auto 16px; }
+  header.hero p.sub { font-size:19px; max-width:620px; margin:0 auto 8px; text-shadow:0 1px 10px rgba(0,0,0,.5); }
+  header.hero p.appt { font-size:15px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold-soft); margin-bottom:26px; }
+  .callbtn { display:inline-block; background:var(--gold); color:var(--indigo-deep); font-size:20px; font-weight:bold; padding:15px 32px; border-radius:999px; text-decoration:none; box-shadow:0 4px 0 #9a7a3c; }
+  .callbtn:active { transform:translateY(2px); box-shadow:none; }
+  .trust { background:#fff; text-align:center; padding:14px 12px; font-size:15px; color:var(--indigo); border-bottom:1px solid var(--gold-soft); }
+  section { max-width:920px; margin:0 auto; padding:40px 18px 8px; }
+  h2 { font-size:29px; color:var(--indigo); text-align:center; margin-bottom:6px; }
+  .h2sub { text-align:center; color:var(--muted); font-size:16px; max-width:560px; margin:0 auto 22px; }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:12px; }
+  @media (max-width:680px){ .grid{ grid-template-columns:1fr; } header.hero h1{ font-size:32px; } header.hero{ padding:48px 16px 44px; } }
+  .card { background:#fff; border:1px solid #e7dfca; border-top:3px solid var(--gold); border-radius:12px; padding:22px 20px; box-shadow:0 2px 10px rgba(36,29,82,.05); }
+  .card h3 { font-size:20px; color:var(--indigo); margin-bottom:4px; }
+  .card .price { font-size:19px; color:#9a7a3c; font-weight:bold; margin-bottom:8px; }
+  .card p { font-size:15.5px; color:#453f5e; }
+  .card.wide { grid-column:1 / -1; }
+  .about { display:grid; grid-template-columns: 1fr 1.4fr; gap:26px; align-items:center; }
+  @media (max-width:680px){ .about{ grid-template-columns:1fr; } }
+  .about img { width:100%; border-radius:12px; box-shadow:0 6px 20px rgba(36,29,82,.18); }
+  .about h2 { text-align:left; }
+  .about p { font-size:16.5px; margin-bottom:12px; color:#453f5e; }
+  .eventphoto { margin-top:10px; }
+  .eventphoto img { width:100%; border-radius:12px; box-shadow:0 6px 20px rgba(36,29,82,.15); }
+  .eventphoto figcaption { text-align:center; font-size:14px; color:var(--muted); padding:8px 4px 0; }
+  .bigcta { background:var(--indigo); color:#fff; text-align:center; padding:44px 18px; margin-top:38px; }
+  .bigcta h2 { color:#fff; }
+  .bigcta p { color:var(--gold-soft); margin-bottom:20px; font-size:16.5px; }
+  .contact-lines { font-size:17px; line-height:2; margin-bottom:22px; }
+  .contact-lines a { color:#fff; font-weight:bold; text-decoration:none; border-bottom:1px solid var(--gold); }
+  footer { text-align:center; font-size:13.5px; color:var(--muted); padding:24px 12px 96px; }
+  footer a { color:var(--indigo); }
+  .sticky { position:fixed; bottom:0; left:0; right:0; background:var(--gold); text-align:center; padding:14px; z-index:50; }
+  .sticky a { color:var(--indigo-deep); font-weight:bold; font-size:19px; text-decoration:none; display:block; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Divine Flow Collective",
+  "description": "Private group yoga, event planning and day-of coordination, wellness services, and oracle readings by Danielle Donnelly, serving the Lake George, NY area. By appointment.",
+  "url": "https://divineflow.io/",
+  "telephone": "+1-518-480-7102",
+  "email": "Danielledonnellycreativedesign@gmail.com",
+  "founder": { "@type": "Person", "name": "Danielle Donnelly" },
+  "areaServed": ["Lake George","Glens Falls","Queensbury","Bolton Landing","Warrensburg"],
+  "address": { "@type": "PostalAddress", "addressLocality": "Lake George", "addressRegion": "NY", "addressCountry": "US" },
+  "priceRange": "$"
+}
+</script>
+</head>
+<body>
+
+<div class="topbar">By appointment across the Lake George area — call or text <a href="tel:+15184807102">(518) 480-7102</a></div>
+
+<header class="hero">
+  <img class="logo" src="assets/logo.png" alt="Divine Flow Collective logo — gold eye and crescent moon">
+  <h1>Divine Flow Collective</h1>
+  <div class="rule"></div>
+  <p class="sub">Private yoga, event planning, and wellness — brought to you in the Lake George area.</p>
+  <p class="appt">By appointment</p>
+  <a class="callbtn" href="tel:+15184807102">📞 Call or Text (518) 480-7102</a>
+</header>
+
+<div class="trust">✔ Yoga that comes to you &nbsp;•&nbsp; ✔ Weddings &amp; private events &nbsp;•&nbsp; ✔ Lake George area</div>
+
+<section>
+  <h2>Services</h2>
+  <p class="h2sub">Everything is by appointment — at your home, rental, venue, or a lakeside spot we choose together.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>Private Group Yoga</h3>
+      <div class="price">$250</div>
+      <p>A private session for your group — bachelorettes, birthdays, family gatherings, retreats, or a quiet morning on the dock. Mats provided for up to 10 guests.</p>
+    </div>
+    <div class="card">
+      <h3>Event Planning</h3>
+      <div class="price">$100 / hour</div>
+      <p>Full planning support for parties, weddings, and gatherings — concept, vendors, timeline, and all the details handled so you can actually enjoy your own event.</p>
+    </div>
+    <div class="card">
+      <h3>Event Coordinator for Parties &amp; Weddings</h3>
+      <div class="price">$1,500 flat — full day</div>
+      <p>Day-of coordination: Danielle runs the day — vendors, timeline, setup, and every little thing that pops up — so you and your family can be fully present.</p>
+    </div>
+    <div class="card">
+      <h3>Wellness Services</h3>
+      <div class="price">From $50</div>
+      <p>Therapy-ball rolling, guided meditation, breathwork, and personal wellness plans — one-on-one or small-group sessions built around what your body needs.</p>
+    </div>
+    <div class="card wide">
+      <h3>Oracle Readings</h3>
+      <div class="price">$20</div>
+      <p>A gentle, intuitive card reading for clarity and reflection — a favorite add-on for girls' weekends, bachelorettes, and retreat evenings.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="about">
+    <img src="assets/lake-mountains.jpg" alt="Calm lake water and Adirondack mountains under a blue sky">
+    <div>
+      <h2>Meet Danielle</h2>
+      <p>Danielle Donnelly is a certified Health &amp; Wellness Coach (SUNY Adirondack) and a 200-hour trained yoga teacher. Through Divine Flow Collective, she brings yoga, wellness, and beautifully run events directly to clients across the Lake George area — homes, rentals, wedding venues, and lakeside lawns.</p>
+      <p>Her approach is simple: meet people where they are, keep it calm and personal, and handle the details so all you have to do is show up and breathe.</p>
+    </div>
+  </div>
+  <figure class="eventphoto">
+    <img src="assets/group-yoga-event.jpg" alt="Danielle leading a large group yoga event">
+    <figcaption>Danielle leading a large-group yoga event — private groups and special events are her specialty.</figcaption>
+  </figure>
+</section>
+
+<div class="bigcta">
+  <h2>Book Your Date</h2>
+  <p>By appointment — call, text, or email to start planning.</p>
+  <div class="contact-lines">
+    📞 <a href="tel:+15184807102">(518) 480-7102</a><br>
+    ✉️ <a href="mailto:Danielledonnellycreativedesign@gmail.com">Danielledonnellycreativedesign@gmail.com</a><br>
+    🎵 TikTok <a href="https://www.tiktok.com/@divineflow04">@divineflow04</a> &nbsp;•&nbsp; 💜 <a href="https://www.patreon.com/Divine_Flow">patreon.com/Divine_Flow</a>
+  </div>
+  <a class="callbtn" href="tel:+15184807102">📞 Call or Text (518) 480-7102</a>
+</div>
+
+<footer>
+  Divine Flow Collective • Danielle Donnelly • Lake George, NY<br>
+  Private yoga, event planning &amp; coordination, wellness services, oracle readings — by appointment<br>
+  © 2026 Divine Flow Collective. All rights reserved.
+</footer>
+
+<div class="sticky"><a href="tel:+15184807102">📞 Tap to Call or Text (518) 480-7102</a></div>
+
+</body>
+</html>
