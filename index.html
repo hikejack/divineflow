@@ -9,50 +9,55 @@
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
   :root {
-    --indigo:#241d52; --indigo-deep:#1a143f; --gold:#c6a15b; --gold-soft:#e9dcc0;
-    --cream:#faf7f0; --ink:#2c2742; --muted:#6f6a85;
+    --indigo:#241d52; --indigo-deep:#120d2c; --panel:#1d1745; --panel2:#251c55;
+    --gold:#c6a15b; --gold-bright:#d8b878; --gold-soft:#e9dcc0;
+    --ink:#ece7f7; --body:#c9c2de; --muted:#9a92b8;
   }
-  body { font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color:var(--ink); line-height:1.6; background:var(--cream); }
+  body { font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color:var(--ink); line-height:1.6; background:var(--indigo-deep); }
   h1, h2, h3, .serif { font-family: Georgia, "Palatino Linotype", "Book Antiqua", serif; font-weight:normal; }
-  .topbar { background:var(--indigo-deep); color:var(--gold-soft); text-align:center; padding:10px 12px; font-size:14.5px; letter-spacing:.02em; }
+  .topbar { background:#0b0721; color:var(--gold-soft); text-align:center; padding:10px 12px; font-size:14.5px; letter-spacing:.02em; }
   .topbar a { color:#fff; font-weight:bold; text-decoration:none; }
   header.hero {
-    background: linear-gradient(rgba(26,20,63,.52), rgba(26,20,63,.38) 55%, rgba(26,20,63,.62)), url("assets/hero-dock-yoga.jpg") center 38%/cover no-repeat;
-    color:#fff; text-align:center; padding:64px 18px 58px;
+    background: radial-gradient(1100px 480px at 18% -10%, #33276e 0%, rgba(51,39,110,0) 60%), linear-gradient(160deg, #1a143f 0%, #120d2c 78%);
+    color:#fff; padding:54px 18px 50px;
   }
-  header.hero img.logo { width:118px; height:118px; border-radius:50%; box-shadow:0 6px 24px rgba(0,0,0,.35); margin-bottom:18px; }
+  .hero-inner { max-width:1020px; margin:0 auto; display:grid; grid-template-columns:1.15fr .85fr; gap:36px; align-items:center; }
+  @media (max-width:760px){ .hero-inner{ grid-template-columns:1fr; text-align:center; } .hero-text .rule{ margin-left:auto; margin-right:auto; } }
+  header.hero img.logo { width:104px; height:104px; border-radius:50%; box-shadow:0 6px 24px rgba(0,0,0,.5); margin-bottom:16px; }
   header.hero h1 { font-size:42px; line-height:1.15; letter-spacing:.04em; margin-bottom:6px; text-shadow:0 2px 14px rgba(0,0,0,.45); }
-  header.hero .rule { width:64px; height:2px; background:var(--gold); margin:14px auto 16px; }
-  header.hero p.sub { font-size:19px; max-width:620px; margin:0 auto 8px; text-shadow:0 1px 10px rgba(0,0,0,.5); }
-  header.hero p.appt { font-size:15px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold-soft); margin-bottom:26px; }
+  header.hero .rule { width:64px; height:2px; background:var(--gold); margin:14px 0 16px; }
+  header.hero p.sub { font-size:19px; max-width:520px; margin-bottom:8px; color:#e6ddf5; text-shadow:0 1px 10px rgba(0,0,0,.5); }
+  header.hero p.appt { font-size:15px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold-bright); margin-bottom:26px; }
+  .hero-photo img { width:100%; display:block; border-radius:14px; border:1px solid rgba(198,161,91,.45); box-shadow:0 14px 38px rgba(0,0,0,.55); }
   .callbtn { display:inline-block; background:var(--gold); color:var(--indigo-deep); font-size:20px; font-weight:bold; padding:15px 32px; border-radius:999px; text-decoration:none; box-shadow:0 4px 0 #9a7a3c; }
   .callbtn:active { transform:translateY(2px); box-shadow:none; }
-  .trust { background:#fff; text-align:center; padding:14px 12px; font-size:15px; color:var(--indigo); border-bottom:1px solid var(--gold-soft); }
+  .trust { background:var(--panel); text-align:center; padding:14px 12px; font-size:15px; color:var(--gold-soft); border-top:1px solid rgba(198,161,91,.25); border-bottom:1px solid rgba(198,161,91,.25); }
   section { max-width:920px; margin:0 auto; padding:40px 18px 8px; }
-  h2 { font-size:29px; color:var(--indigo); text-align:center; margin-bottom:6px; }
+  h2 { font-size:29px; color:#fff; text-align:center; margin-bottom:6px; }
   .h2sub { text-align:center; color:var(--muted); font-size:16px; max-width:560px; margin:0 auto 22px; }
   .grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:12px; }
-  @media (max-width:680px){ .grid{ grid-template-columns:1fr; } header.hero h1{ font-size:32px; } header.hero{ padding:48px 16px 44px; } }
-  .card { background:#fff; border:1px solid #e7dfca; border-top:3px solid var(--gold); border-radius:12px; padding:22px 20px; box-shadow:0 2px 10px rgba(36,29,82,.05); }
-  .card h3 { font-size:20px; color:var(--indigo); margin-bottom:4px; }
-  .card .price { font-size:19px; color:#9a7a3c; font-weight:bold; margin-bottom:8px; }
-  .card p { font-size:15.5px; color:#453f5e; }
+  @media (max-width:680px){ .grid{ grid-template-columns:1fr; } header.hero h1{ font-size:32px; } header.hero{ padding:42px 16px 38px; } }
+  .card { background:var(--panel2); border:1px solid rgba(198,161,91,.28); border-top:3px solid var(--gold); border-radius:12px; padding:22px 20px; box-shadow:0 4px 16px rgba(0,0,0,.35); }
+  .card h3 { font-size:20px; color:#fff; margin-bottom:4px; }
+  .card .price { font-size:19px; color:var(--gold-bright); font-weight:bold; margin-bottom:8px; }
+  .card p { font-size:15.5px; color:var(--body); }
   .card.wide { grid-column:1 / -1; }
-  .about { display:grid; grid-template-columns: 1fr 1.4fr; gap:26px; align-items:center; }
+  .about { display:grid; grid-template-columns: .8fr 1.4fr; gap:26px; align-items:start; }
   @media (max-width:680px){ .about{ grid-template-columns:1fr; } }
-  .about img { width:100%; border-radius:12px; box-shadow:0 6px 20px rgba(36,29,82,.18); }
+  .about img { width:100%; border-radius:12px; border:1px solid rgba(198,161,91,.35); box-shadow:0 8px 26px rgba(0,0,0,.5); }
   .about h2 { text-align:left; }
-  .about p { font-size:16.5px; margin-bottom:12px; color:#453f5e; }
-  .eventphoto { margin-top:10px; }
-  .eventphoto img { width:100%; border-radius:12px; box-shadow:0 6px 20px rgba(36,29,82,.15); }
+  .about p { font-size:16.5px; margin-bottom:12px; color:var(--body); }
+  .about p strong { color:#fff; }
+  .eventphoto { margin-top:22px; }
+  .eventphoto img { width:100%; border-radius:12px; box-shadow:0 8px 26px rgba(0,0,0,.5); }
   .eventphoto figcaption { text-align:center; font-size:14px; color:var(--muted); padding:8px 4px 0; }
-  .bigcta { background:var(--indigo); color:#fff; text-align:center; padding:44px 18px; margin-top:38px; }
+  .bigcta { background:#0b0721; color:#fff; text-align:center; padding:44px 18px; margin-top:38px; border-top:1px solid rgba(198,161,91,.3); }
   .bigcta h2 { color:#fff; }
   .bigcta p { color:var(--gold-soft); margin-bottom:20px; font-size:16.5px; }
   .contact-lines { font-size:17px; line-height:2; margin-bottom:22px; }
   .contact-lines a { color:#fff; font-weight:bold; text-decoration:none; border-bottom:1px solid var(--gold); }
   footer { text-align:center; font-size:13.5px; color:var(--muted); padding:24px 12px 96px; }
-  footer a { color:var(--indigo); }
+  footer a { color:var(--gold-soft); }
   .sticky { position:fixed; bottom:0; left:0; right:0; background:var(--gold); text-align:center; padding:14px; z-index:50; }
   .sticky a { color:var(--indigo-deep); font-weight:bold; font-size:19px; text-decoration:none; display:block; }
 </style>
@@ -77,12 +82,19 @@
 <div class="topbar">By appointment across the Lake George area — call or text <a href="tel:+15184807102">(518) 480-7102</a></div>
 
 <header class="hero">
-  <img class="logo" src="assets/logo.png" alt="Divine Flow Collective logo — gold eye and crescent moon">
-  <h1>Divine Flow Collective</h1>
-  <div class="rule"></div>
-  <p class="sub">Private yoga, event planning, and wellness — brought to you in the Lake George area.</p>
-  <p class="appt">By appointment</p>
-  <a class="callbtn" href="tel:+15184807102">📞 Call or Text (518) 480-7102</a>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <img class="logo" src="assets/logo.png" alt="Divine Flow Collective logo — gold eye and crescent moon">
+      <h1>Divine Flow Collective</h1>
+      <div class="rule"></div>
+      <p class="sub">Private yoga, event planning, and wellness — brought to you in the Lake George area.</p>
+      <p class="appt">By appointment</p>
+      <a class="callbtn" href="tel:+15184807102">📞 Call or Text (518) 480-7102</a>
+    </div>
+    <div class="hero-photo">
+      <img src="assets/hero-dock-yoga.jpg" alt="Yoga mats set out on a dock beside a mountain lake at golden hour">
+    </div>
+  </div>
 </header>
 
 <div class="trust">✔ Yoga that comes to you &nbsp;•&nbsp; ✔ Weddings &amp; private events &nbsp;•&nbsp; ✔ Lake George area</div>
@@ -121,16 +133,18 @@
 
 <section>
   <div class="about">
-    <img src="assets/lake-mountains.jpg" alt="Calm lake water and Adirondack mountains under a blue sky">
+    <img src="assets/danielle-portrait.jpg" alt="Danielle Donnelly, founder of Divine Flow Collective">
     <div>
       <h2>Meet Danielle</h2>
-      <p>Danielle Donnelly is a certified Health &amp; Wellness Coach (SUNY Adirondack) and a 200-hour trained yoga teacher. Through Divine Flow Collective, she brings yoga, wellness, and beautifully run events directly to clients across the Lake George area — homes, rentals, wedding venues, and lakeside lawns.</p>
-      <p>Her approach is simple: meet people where they are, keep it calm and personal, and handle the details so all you have to do is show up and breathe.</p>
+      <p>Danielle began her yoga practice after 20 years of performance dancing. Casual adult dance classes were not easy to find throughout college years, but yoga was much more accessible. This led Danielle to study Social Sciences at the University of Buffalo with an internship in Universal Design Yoga. During her studies, she learned the importance of finding balance, which inspired her to teach others. Danielle subscribes to the belief that anyone has the ability to take a yoga class with universal design in mind.</p>
+      <p>Danielle found a much needed lightness through her yoga training during a very dark time in her life. After the passing of her father in 2018, she was inspired and enlightened in finding a balance in the light and dark. She is certified in Vinyasa, Hatha, and also specializes in Yin Yoga. As a dancer, Yin Yoga became very important to balancing the high intensity classes.</p>
+      <p>The goal of Danielle&rsquo;s class is to connect one&rsquo;s body movements to their breath, as well as safely exploring the limits within the body. Learning to honor and cherish our bodies, and that everyone and every day is unique.</p>
+      <p><strong>That same balance is how Danielle plans.</strong> Through Divine Flow Collective, she brings it to the parties, weddings, and gatherings she plans and coordinates across the Lake George area — every detail handled calmly, so all you have to do is show up and be present. She is also a certified Health &amp; Wellness Coach (SUNY Adirondack).</p>
     </div>
   </div>
   <figure class="eventphoto">
-    <img src="assets/group-yoga-event.jpg" alt="Danielle leading a large group yoga event">
-    <figcaption>Danielle leading a large-group yoga event — private groups and special events are her specialty.</figcaption>
+    <img src="assets/group-yoga-event.jpg" alt="Danielle teaching a large group yoga class">
+    <figcaption>Danielle teaching a large-group yoga class.</figcaption>
   </figure>
 </section>
 
@@ -140,7 +154,7 @@
   <div class="contact-lines">
     📞 <a href="tel:+15184807102">(518) 480-7102</a><br>
     ✉️ <a href="mailto:Danielledonnellycreativedesign@gmail.com">Danielledonnellycreativedesign@gmail.com</a><br>
-    🎵 TikTok <a href="https://www.tiktok.com/@divineflow04">@divineflow04</a> &nbsp;•&nbsp; 💜 <a href="https://www.patreon.com/Divine_Flow">patreon.com/Divine_Flow</a>
+    🎵 TikTok <a href="https://www.tiktok.com/@danielledonnelly73">@Danielledonnelly73</a> &nbsp;•&nbsp; 💜 <a href="https://www.patreon.com/Divine_Flow">patreon.com/Divine_Flow</a>
   </div>
   <a class="callbtn" href="tel:+15184807102">📞 Call or Text (518) 480-7102</a>
 </div>
